@@ -1,0 +1,16 @@
+body{
+   margin: 0px 50px 100px 50px;
+   font-family : georgia;
+}
+
+.head{
+    background : pink;
+    color :white;
+    padding: 75px 5px;
+}
+
+.page{
+    padding : 10px 30px;;
+    margin-top : 15px;
+    background-color: lightgrey;
+}

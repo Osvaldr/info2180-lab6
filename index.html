@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
+        
         <title>INFO2180 Lab6</title>
+        
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="test.js"></script>
+		<script src="script.js"></script>
+		<link href="styles.css" type="text/css" rel="stylesheet"> 
+		
     </head>
+    
     <body>
-          <p>Simply click the button below to search.</p>
-          <button type="button" id="search">Search</button>
+        
+        <div class="head"><h1>Web Dictionary</h1></div>
+        
+        <div class="page">
+            
+            <p> Look up any word (ajax, definition, bar, html, css, javascript or php).</p>
+                
+                <input type="text" id= "value" placeholder="Type your word here" >
+                
+                <button type="button" id="search" value="Search">Search</button><hr>
+                
+                <h3><strong>Results</strong></h3><br>
+                
+                <div id= "result"></div>
+        
+        </div>
+    
     </body>
+
 </html>
