@@ -1,4 +1,5 @@
 // JavaScript File
+/*global $*/
 $(document).ready(function() {
   let searchBtn = $('#search');
 

@@ -14,5 +14,49 @@ $definition = [
     "php" => "A server-side scripting language, and a powerful tool for making dynamic and interactive websites",
 ];
 
-print "<h3>" . strtoupper($query) . "</h3>";
-print "<p>" . $definition[$query] . "</p>";
+$xmldata = '<?xml version="1.0" encoding="UTF-8"?>
+<entries>
+    <definition>
+        <name>definition</name>
+        <author>Matthew</author>
+        <meaning>A statement of the exact meaning of a word, especially in a dictionary.</meaning>
+    </definition>
+    <definition>
+        <name>bar</name>
+        <author>Andrew</author>
+        <meaning>A place that sells alcholic beverages</meaning>
+    </definition>
+    <definition>
+        <name>ajax</name>
+        <author>Oswald</author>
+        <meaning>Technique which involves the use of javascript and xml (or JSON)</meaning>
+    </definition>
+    <definition>
+        <name>html</name>
+        <author>Patterson</author>
+        <meaning>The standard markup language for creating web pages and web applications.</meaning>
+    </definition>
+    <definition>
+        <name>css</name>
+        <author>Rumbolt</author>
+        <meaning>A style sheet language used for describing the presentation of a document written in a markup language.</meaning>
+    </definition>
+    <definition>
+        <name>javascript</name>
+        <author>Waterbolt</author>
+        <meaning>A lightweight, interpreted programming language with first-class functions that adds interactivity to your website.</meaning>
+    </definition>
+    <definition>
+        <name>php</name>
+        <author>James</author>
+        <meaning>A server-side scripting language, and a powerful tool for making dynamic and interactive websites</meaning>
+    </definition>
+</entries>';
+
+if($query=="&all=true")
+{header('Content-Type: text/xml');
+$xmlOutput = new SimpleXMLElement($xmldata);
+echo $xmlOutput->asXML();}
+else
+{print "<h3>" . strtoupper($query) . "</h3>";
+print "<p>" . $definition[$query] . "</p>";}
